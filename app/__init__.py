@@ -1,5 +1,6 @@
 
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
+from flask import Flask, request, json, session, g, redirect, url_for, abort, render_template, flash
+import sqlite3
 import sshpubkeys
 from db_setup import get_db
 
@@ -14,62 +15,71 @@ def show_entries():
     print "connecting to db"
     db = get_db()
     print "connected"
-    cur = db.execute('select u.user_name, pk.ssh_pub_key from  users u, user_details pk')
+    
+    #cur = db.execute('select u.user_name, pk.ssh_pub_key from  users u, user_details pk')
+
+    cur = db.execute('select * from user_details')
     entries = cur.fetchall()
     return render_template('show_entries.html', entries=entries)
 
 
-@app.route('/add', methods=['POST'])
+@app.route('/add', methods=['GET', 'POST'])
 def add_entry():
-    db = get_db()
+
+    #db = get_db()
 
     key = str(request.form['pub_key'])
-    #k = "xxxxtestkeyzzzz"
-    #key = str(k)
     username = str(request.form['username'])
     category = str(request.form['category'])
-        
-#    user_fp = str(sshpubkeys.SSHKey(key).hash_md5())
 
-    user_fp = str(sshpubkeys.SSHKey(key).hash())
-    db.execute('insert into users (user_id,user_name, category) values (?, ?, ?)' , (1, username, category))
+    result = find_user(username)
+    if(result == []):
+        completed, db = insert_details(username, category, key)
 
-    db.execute('INSERT INTO user_details (id, user_name, ssh_pub_key, fingerprint) VALUES (?, ?, ?, ?)' , (1, username, key, user_fp))
- 
-    db.commit()
-    flash('New entry was successfully posted')
+        if completed :
+            db.commit()
+            flash('New entry was successfully posted')
+        else:
+            flash('New entry could not be added')
+    else:
+        flash('User already exists')
+    
     return redirect(url_for('show_entries'))
 
 
-#@app.route('/login', methods=['GET', 'POST'])
-#def login():
-
-#    error = None
-#    if request.method == 'POST':
-
-#        username = request.form['username']
-#        pub_key = request.form['pub_key']
-#        category = request.form['category']
+def find_user(username):
+    con = get_db()
+    try:
+        result = con.execute("select * from users where user_name=? ", (username,))
         
-#        completion = validate(username, pub_key, category)
+    except sqlite3.IntegrityError as e:
+        flash( e.__doc__)
+    except:
+        flash('Error !!')
 
-#        return redirect(url_for('show_entries'))
-#    return render_template('login.html', error=error)
+
+    return result.fetchall()
 
 
-#def validate(username, pub_key, category):
+def insert_details(username, category, key):
+    db = get_db()
+    completed = False
+    user_fp = str(sshpubkeys.SSHKey(key).hash())
 
-#    db = get_db()
-#    pub_key = "dsdsdjnfownsfk"
-#    category = "devops"
+    try:
+        db.execute('insert into users (user_name, category) values (?, ?)' , (username, category))
 
-#    completion = False
-#    cur = db.execute("select u.user_name, ud.ssh_pub_key from users u, user_details ud WHERE user_name=?" % (username))
-#    entries = cur.fetchall()
-#    if entries != NULL:
-#      flash("User data already exists")
-#      return render_template('show_entries.html', entries=entries)
-#    else:
-#      flash("New User, Adding to DB ...")
-      
+        db.execute('INSERT INTO user_details (user_name, ssh_pub_key, fingerprint) VALUES (?, ?, ?)' , (username, key, user_fp))
+
+    except sqlite3.IntegrityError as e:
+        flash( e.__doc__)
+        flash('Integrity Error')
+    except sqlite3.OperationalError as o:
+        flash( o.__doc__)
+        flash('Operational error')
+    except:
+        flash('Unexpected Error')
+
+    return (True, db)
+
 
