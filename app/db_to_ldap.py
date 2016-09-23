@@ -1,7 +1,7 @@
 import argparse
+import sys
 import ldap
 import sqlite3
-#from db_setup import get_db
 from ldap_con import get_ldap
 import ldap.modlist as modlist
 
@@ -38,10 +38,15 @@ def get_user(username, vpc_env):
       completion = ldap_add(ldap_user, ldap_grp, ldap_uid)
       
       if completion:
-        print "LDAP Updated updating the status table for starttime"
-        update_status(ldap_user, vpc_env)
+        print "LDAP Updated , updating the status table for starttime"
+        stats ,db = update_status(ldap_user, vpc_env)
+        if stats:        
+          db.commit()
+          print 'User status successfully updated.'
+        else:
+          print 'Error!! User status could not be updated.'
       else:
-        print 'Error!! User status could not be updated.'
+        print 'Error!! User could not be added to LDAP'
     else:
       print 'Error !! User Data no found.'
   else:
@@ -105,15 +110,25 @@ def ldap_add(username, group, uid):
 
 def update_status(username, category):
 
-  conn = get_con()
-  user = str(username)
-  category = str(category)
+  stats = False
+  db = get_con()
+
+  status = 'active'
   try:
-    conn.execute('insert into access_status (user_name, status, env) values (?, ?, ?)' , (user, 'active', category))
-    print "status updated"
-  except sqlite3.Error, e:
-    print "Error %s:" % e.args[0]
-    sys.exit(1)
+    db.execute('insert into access_status (user_name, status, env) values (?, ?, ?)' , (username, status, category))
+  except:
+    err = "Error !!  %s" % sys.exc_info()[0]
+    print "Error : %s" % err
+
+  result = db.execute('select * from access_status where user_name=?',(username,)).fetchall()
+
+  if(result != []):
+    print "status updated "
+    stats = True
+    return (stats, db)
+  else:
+    print "status update failed."
+    return stats
 
 
 def get_con():
@@ -121,7 +136,6 @@ def get_con():
   con.row_factory = sqlite3.Row
   return con
 
-# maybe main is not needed:TODO
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='Takes username and vpc name')

@@ -14,7 +14,7 @@ drop table if exists access_status;
 create table access_status (
 user_name text NOT NULL PRIMARY KEY,
 status text NOT NULL,
-env test NOT NULL,
+env text NOT NULL,
 timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 FOREIGN KEY(user_name) REFERENCES users(user_name) );
 
