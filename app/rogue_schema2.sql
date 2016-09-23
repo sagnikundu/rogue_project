@@ -18,3 +18,8 @@ env test NOT NULL,
 timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 FOREIGN KEY(user_name) REFERENCES users(user_name) );
 
+drop table if exists user_ref;
+create table user_ref (
+user_name text NOT NULL,
+uid integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+category text NOT NULL );
