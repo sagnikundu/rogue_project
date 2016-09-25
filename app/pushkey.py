@@ -1,5 +1,7 @@
-import sys, sqlite3, argparse
+import os, sys, sqlite3, argparse
 from db_to_ldap import get_con , execute_query
+
+auth_file = 'authorized_keys'
 
 def user_get(username):
   
@@ -9,12 +11,18 @@ def user_get(username):
     ssh_key = db_data[0][0]
     return ssh_key
   else: 
-    print "key not found in db"
+    return False
 
 
-def update_auth_file(key):
-  
-
+def update_local_auth_file(key):
+  update = False
+  #create a authorized_keys file
+  with open(auth_file, 'a+') as f:
+    f.write(key)
+    f.write("\n")
+    update = True
+    return update
+      
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='Takes username and pushes users pub_key to authkeys')
@@ -28,5 +36,11 @@ if __name__ == '__main__':
     exit(1)
   else:
     key =  user_get(results.user_name)
-    print key
-
+    if key:
+      update = update_local_auth_file(key)
+      if update:
+        print "%s 's key updated .." % results.user_name.split('@')[0]
+      else:
+        print "auth file could not be updated "
+    else:
+      print  "key not found !!"
