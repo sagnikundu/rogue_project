@@ -21,6 +21,7 @@ def update_local_auth_file(key):
     f.write(key)
     f.write("\n")
     update = True
+    
     return update
       
 
