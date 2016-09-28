@@ -3,7 +3,7 @@ from flask import Flask, request, json, session, g, redirect, url_for, abort, re
 import sys
 import sqlite3
 import sshpubkeys
-from datetime import datetime, timedelta
+from datetime import datetime
 from db_setup import get_db
 
 
@@ -35,13 +35,11 @@ def add_entry():
     category = str(request.form['category'])
 
     result = find_user(username)
-    print result
-    #user_status = result[0][1]
+    user_status = result[0][1]
     #print result[0][1]
     if(result != [] and category.lower() == result[0][3].lower()):
         flash('Username found in trusted list.. checking user status.')
 
-        user_status = result[0][1]
         if(user_status == 'active'):
             flash('User is active.. adding user')
             completed, db ,s_time, e_time = insert_details(username, category, key)
@@ -64,7 +62,7 @@ def add_entry():
 def find_user(username):
     con = get_db()
     try:
-        result = con.execute("select * from users where user_name=? ", (username,))
+        result = con.execute("select user_name, status from users where user_name=? ", (username,))
         
     except sqlite3.IntegrityError as e:
         flash( e.__doc__)
@@ -105,7 +103,7 @@ def insert_details(username, category, key):
 
 def verify_all(username):
     db = get_db()
-    result = db.execute("select user_name ,ssh_pub_key from user_details where user_name=? ", (username,))
+    result = db.execute("select user_name ,env from access_status where user_name=? ", (username,))
     if(result.fetchall() == []):
         return False
     else:

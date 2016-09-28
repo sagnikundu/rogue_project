@@ -3,7 +3,6 @@ from flask import Flask, request, json, session, g, redirect, url_for, abort, re
 import sys
 import sqlite3
 import sshpubkeys
-from datetime import datetime, timedelta
 from db_setup import get_db
 
 
@@ -35,36 +34,27 @@ def add_entry():
     category = str(request.form['category'])
 
     result = find_user(username)
-    print result
-    #user_status = result[0][1]
     #print result[0][1]
-    if(result != [] and category.lower() == result[0][3].lower()):
-        flash('Username found in trusted list.. checking user status.')
+    if(result != [] and category.lower() == result[0][1].lower()):
+        flash('Username found in trusted list.. adding user')
+        
+        completed, db = insert_details(username, category, key)
 
-        user_status = result[0][1]
-        if(user_status == 'active'):
-            flash('User is active.. adding user')
-            completed, db ,s_time, e_time = insert_details(username, category, key)
-
-            if completed :
-                db.commit()
-                flash('New entry was successfully posted')
-            else:
-                flash('New entry could not be added')
+        if completed :
+            db.commit()
+            flash('New entry was successfully posted')
         else:
-            flash('User is currently inactive.. wait for the lockdown period to expire ')
+            flash('New entry could not be added')
     else:
         flash('User is not present in the trusted list, PLEASE send an email to Touchpoint.TigerOps <Touchpoint.TigerOps@hp.com> , to add yourself to the trusted list first !! ')
     
     return redirect(url_for('show_entries'))
 
 
-# users table is the ref table now. Entries to be updated manually here.
-
 def find_user(username):
     con = get_db()
     try:
-        result = con.execute("select * from users where user_name=? ", (username,))
+        result = con.execute("select uid, category from user_ref where user_name=? ", (username,))
         
     except sqlite3.IntegrityError as e:
         flash( e.__doc__)
@@ -78,12 +68,10 @@ def insert_details(username, category, key):
     db = get_db()
     completed = False
     key = str(key)
-    start_time = datetime.now()
-    end_time = start_time + timedelta(hours=3)
     try:
         user_fp = str(sshpubkeys.SSHKey(key).hash_md5())
-        db.execute('insert into access_status (user_name, env, timestamp) values (?, ?, ?)' , (username, category, start_time))
-        db.execute("update users set status='inactive', start_timestamp=? where user_name=? ", (start_time, username))
+
+        db.execute('insert into users (user_name, category) values (?, ?)' , (username, category))
 
         db.execute('INSERT INTO user_details (user_name, ssh_pub_key, fingerprint) VALUES (?, ?, ?)' , (username, key, user_fp))
 
@@ -99,13 +87,13 @@ def insert_details(username, category, key):
     
     status = verify_all(username)
     
-    return (status, db, start_time, end_time)
+    return (status, db)
 
 
 
 def verify_all(username):
     db = get_db()
-    result = db.execute("select user_name ,ssh_pub_key from user_details where user_name=? ", (username,))
+    result = db.execute("select user_name, category from users where user_name=? ", (username,))
     if(result.fetchall() == []):
         return False
     else:
