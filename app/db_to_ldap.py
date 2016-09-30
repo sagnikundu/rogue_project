@@ -6,7 +6,7 @@ from ldap_con import get_ldap
 import ldap.modlist as modlist
 
 
-DB_DIR = "/root/workspace/rogue/project/app/rogue.db"
+DB_DIR = "/root/workspace/rogue/project/app/rogue3.db"
 
 
 

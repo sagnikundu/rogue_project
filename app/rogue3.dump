@@ -1,0 +1,20 @@
+PRAGMA foreign_keys=ON;
+BEGIN TRANSACTION;
+CREATE TABLE users (
+user_name text NOT NULL PRIMARY KEY ,
+status text NOT NULL,
+start_timestamp text,
+category text NOT NULL );
+INSERT INTO "users" VALUES('user1','inactive','2016-09-28 20:57:18.080140','devops');
+CREATE TABLE user_details (
+user_name text NOT NULL PRIMARY KEY ,
+ssh_pub_key text NOT NULL,
+fingerprint text NOT NULL,
+FOREIGN KEY(user_name) REFERENCES users(user_name) );
+INSERT INTO "user_details" VALUES('user1','ssh-rsa AAAB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322+Au/9yy9oaABBRCrHN/yo88BC0AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322klCi0/aEBBc02N+JJP john@example.com','MD5:fa:3e:0d:23:7a:8e:0f:84:43:de:4c:8f:ed:aa:2c:87');
+CREATE TABLE access_status (
+user_name text NOT NULL PRIMARY KEY,
+env text NOT NULL,
+timestamp text NOT NULL );
+INSERT INTO "access_status" VALUES('user1','DEVOPS','2016-09-28 20:57:18.080140');
+COMMIT;

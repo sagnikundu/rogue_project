@@ -5,7 +5,7 @@ import sqlite3
 import sshpubkeys
 from datetime import datetime, timedelta
 from db_setup import get_db
-
+from create_user_file import create_userfile
 
 app = Flask(__name__)
 #from app import app
@@ -35,9 +35,7 @@ def add_entry():
     category = str(request.form['category'])
 
     result = find_user(username)
-    print result
-    #user_status = result[0][1]
-    #print result[0][1]
+
     if(result != [] and category.lower() == result[0][3].lower()):
         flash('Username found in trusted list.. checking user status.')
 
@@ -49,6 +47,11 @@ def add_entry():
             if completed :
                 db.commit()
                 flash('New entry was successfully posted')
+                
+                # creating a local copy for the users present in access_status
+                print "Creating user file"
+                create_userfile()
+                
             else:
                 flash('New entry could not be added')
         else:
@@ -83,9 +86,23 @@ def insert_details(username, category, key):
     try:
         user_fp = str(sshpubkeys.SSHKey(key).hash_md5())
         db.execute('insert into access_status (user_name, env, timestamp) values (?, ?, ?)' , (username, category, start_time))
+ 
+        details = verify_all(username)
+        if details:
+            print "user already present, now if keys match no need to update else update key"
+            fetch_key = get_keys_from_db(username)
+            if fetch_key == key:
+                print "Keys match, no need for update"
+            else:
+                print "Key mismatch, updating new keys for %s" % username
+                db.execute('update user_details set ssh_pub_key=?, fingerprint=? where user_name=?', (key, user_fp, username))
+
+        else:
+            print "First time user !! updating user details"
+            db.execute('INSERT INTO user_details (user_name, ssh_pub_key, fingerprint) VALUES (?, ?, ?)' , (username, key, user_fp))
+
         db.execute("update users set status='inactive', start_timestamp=? where user_name=? ", (start_time, username))
 
-        db.execute('INSERT INTO user_details (user_name, ssh_pub_key, fingerprint) VALUES (?, ?, ?)' , (username, key, user_fp))
 
     except sqlite3.IntegrityError as e:
         flash( e.__doc__)
@@ -101,6 +118,10 @@ def insert_details(username, category, key):
     
     return (status, db, start_time, end_time)
 
+def get_keys_from_db(username):
+    db = get_db()
+    result = db.execute("select ssh_pub_key from user_details where user_name=? ", (username,))
+    return result[0][0]
 
 
 def verify_all(username):
@@ -110,3 +131,4 @@ def verify_all(username):
         return False
     else:
         return True
+
