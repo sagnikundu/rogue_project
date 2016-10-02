@@ -1,7 +1,7 @@
-import os, sys, sqlite3, argparse
+import os, sys, sqlite3, argparse, subprocess
 from db_to_ldap import get_con , execute_query
 
-auth_file = 'authorized_keys'
+auth_file = '/root/workspace/rogue/project/app/authorized_keys'
 
 def user_get(username):
   
@@ -23,25 +23,36 @@ def update_local_auth_file(key):
     update = True
     
     return update
-      
 
-if __name__ == '__main__':
-  parser = argparse.ArgumentParser(description='Takes username and pushes users pub_key to authkeys')
-  parser.add_argument('-n', action='store', dest='user_name',
-                    help='Provide the username or userid')
-
-  results = parser.parse_args()
-
-  if len(sys.argv) < 2:
-    print "Script accepts one argument, refer: pushkey.py -h (help)"
-    exit(1)
+def delete_from_authfile(user):
+  
+  cmd = "sed -i '/ %s/d' %s " % (user, auth_file)
+  p = subprocess.Popen([cmd], stdout=subprocess.PIPE, shell=True)
+  (output, err) = p.communicate()
+  p_status = p.wait()
+  if p_status == 0:
+    return True
   else:
-    key =  user_get(results.user_name)
-    if key:
-      update = update_local_auth_file(key)
-      if update:
-        print "%s 's key updated .." % results.user_name.split('@')[0]
-      else:
-        print "auth file could not be updated "
-    else:
-      print  "key not found !!"
+    return False
+        
+
+#if __name__ == '__main__':
+#  parser = argparse.ArgumentParser(description='Takes username and pushes users pub_key to authkeys')
+#  parser.add_argument('-n', action='store', dest='user_name',
+#                    help='Provide the username or userid')
+
+#  results = parser.parse_args()
+
+#  if len(sys.argv) < 2:
+#    print "Script accepts one argument, refer: pushkey.py -h (help)"
+#    exit(1)
+#  else:
+#    key =  user_get(results.user_name)
+#    if key:
+#      update = update_local_auth_file(key)
+#      if update:
+#        print "%s 's key updated .." % results.user_name.split('@')[0]
+#      else:
+#        print "auth file could not be updated "
+#    else:
+#      print  "key not found !!"

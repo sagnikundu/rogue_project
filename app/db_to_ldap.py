@@ -55,8 +55,13 @@ def get_user(username, vpc_env):
 
 def execute_query(query):
   db = get_con()
-  result = db.execute(query).fetchall()
-  return result
+  pattern = ['update','select','delete']
+  for p in pattern:
+    if p in query:
+      db.execute(query)
+    else:
+      result = db.execute(query).fetchall()
+      return result
 
 
 def ldap_add(username, group, uid):

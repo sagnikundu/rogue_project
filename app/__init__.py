@@ -6,6 +6,7 @@ import sshpubkeys
 from datetime import datetime, timedelta
 from db_setup import get_db
 from create_user_file import create_userfile
+from pushkey import update_local_auth_file
 
 app = Flask(__name__)
 #from app import app
@@ -18,7 +19,6 @@ def show_entries():
     db = get_db()
     print "connected"
     
-    #cur = db.execute('select u.user_name, pk.ssh_pub_key from  users u, user_details pk')
 
     cur = db.execute('select * from user_details')
     entries = cur.fetchall()
@@ -42,7 +42,7 @@ def add_entry():
         user_status = result[0][1]
         if(user_status == 'active'):
             flash('User is active.. adding user')
-            completed, db ,s_time, e_time = insert_details(username, category, key)
+            completed, db = insert_details(username, category, key)
 
             if completed :
                 db.commit()
@@ -51,6 +51,11 @@ def add_entry():
                 # creating a local copy for the users present in access_status
                 print "Creating user file"
                 create_userfile()
+                print "update authfile"
+                if update_local_auth_file(key):
+                    print "auth file updated"
+                else:
+                    print "auth file could not be updated"    
                 
             else:
                 flash('New entry could not be added')
@@ -82,16 +87,23 @@ def insert_details(username, category, key):
     completed = False
     key = str(key)
     start_time = datetime.now()
-    end_time = start_time + timedelta(hours=3)
     try:
         user_fp = str(sshpubkeys.SSHKey(key).hash_md5())
+
+        print "start of insert"
+
         db.execute('insert into access_status (user_name, env, timestamp) values (?, ?, ?)' , (username, category, start_time))
- 
+        print "verify user" 
+
         details = verify_all(username)
+        print "verification complete"
+
         if details:
-            print "user already present, now if keys match no need to update else update key"
+            flash("user already present, now if keys match no need to update else update key")
             fetch_key = get_keys_from_db(username)
-            if fetch_key == key:
+            print fetch_key
+
+            if str(fetch_key) == key:
                 print "Keys match, no need for update"
             else:
                 print "Key mismatch, updating new keys for %s" % username
@@ -116,11 +128,13 @@ def insert_details(username, category, key):
     
     status = verify_all(username)
     
-    return (status, db, start_time, end_time)
+    return (status, db)
 
 def get_keys_from_db(username):
     db = get_db()
-    result = db.execute("select ssh_pub_key from user_details where user_name=? ", (username,))
+    result = db.execute('select ssh_pub_key from user_details where user_name=?', (username,)).fetchall()
+    print "+++"+username
+    print result
     return result[0][0]
 
 
