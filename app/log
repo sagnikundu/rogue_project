@@ -2268,3 +2268,199 @@ no active entries in db
 no active entries in db
 no active entries in db
 no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 20, 37, 35, 47552)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 20:37:35.047552
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 20, 37, 35, 47552)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 20:37:35.047552
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 20, 37, 35, 47552)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 20:37:35.047552
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 20, 37, 35, 47552)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 20:37:35.047552
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 20, 37, 35, 47552)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 20:37:35.047552
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 20, 37, 35, 47552)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 20:37:35.047552
+found an user with expired timestamp
+remove key from auth_keys
+[(u'user3', u'ssh-rsa AAAB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322+Au/9yy9oaABBRCrHN/yo88BC0AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322klCi0/aEBBc02N+JJP user3@example.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db

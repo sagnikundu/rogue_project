@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+    <form action="{{ url_for('request_entry') }}" method="post" class="add-entry">
+      <dl>
+        <dt>USER NAME:
+        <dd><input type="text" size="30" name="username" placeholder="user for which pub_key was generated" required>
+        <br><br>
+        <br><br>
+        <br><br>
+        <dt>ENVIRONMENT:
+        <select name="env">
+          <option value="">select</option>
+          <option value="LATEST">LATEST</option>
+          <option value="STABLE">STABLE</option>
+          required
+        </select>
+        <br><br>
+        <dd><input type="submit" value="Submit">
+      </dl>
+    </form>
+{#
+  <ul class="entries">
+  {% for entry in entries %}
+      <li><h2>{{ entry.user_name }}</h2>{{ entry.ssh_pub_key|safe }}</li>
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em></li>
+  {% endfor %}
+  </ul>
+#}
+
+
+{% endblock %}

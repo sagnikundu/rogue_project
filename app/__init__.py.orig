@@ -14,29 +14,15 @@ app.secret_key = 'some_secret_key_xyz'
 
 @app.route('/')
 def show_entries():
-    return render_template('new_show_entries.html')
+    entries = ""
+    print "connecting to db"
+    db = get_db()
+    print "connected"
+    
 
-
-@app.route('/add')
-def add_entries():
-    return render_template('add_entries.html')
-
-
-@app.route('/request')
-def request_access():
-    return render_template('request_access.html')
-
-
-
-@app.route('/request', methods=['GET', 'POST'])
-def request_entry():
-    name = str(request.form['username'])
-    env = str(request.form['env'])
-
-    flash("User :"+name+" is seeking access for env: "+env)
-
-    return redirect(url_for('request_access'))
-
+    cur = db.execute('select * from user_details')
+    entries = cur.fetchall()
+    return render_template('show_entries.html', entries=entries)
 
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -78,7 +64,7 @@ def add_entry():
     else:
         flash('User is not present in the trusted list, PLEASE send an email to Touchpoint.TigerOps <Touchpoint.TigerOps@hp.com> , to add yourself to the trusted list first !! ')
     
-    return redirect(url_for('add_entries'))
+    return redirect(url_for('show_entries'))
 
 
 # users table is the ref table now. Entries to be updated manually here.
