@@ -34,6 +34,7 @@ def delete_from_authfile(user):
     return True
   else:
     return False
+  #os.system(cmd)
         
 
 #if __name__ == '__main__':
