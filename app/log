@@ -1126,3 +1126,1145 @@ no active entries in db
 no active entries in db
 no active entries in db
 no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 8, 7, 851090)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:08:07.851090
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 8, 7, 851090)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:08:07.851090
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 8, 7, 851090)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:08:07.851090
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 8, 7, 851090)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:08:07.851090
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 8, 7, 851090)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:08:07.851090
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 8, 7, 851090)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:08:07.851090
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripad.r.ratnaparkhi@hp.com', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 23, 37, 72876)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:23:37.072876
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 23, 37, 72876)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:23:37.072876
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 23, 37, 72876)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:23:37.072876
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 23, 37, 72876)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:23:37.072876
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 23, 37, 72876)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:23:37.072876
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 23, 37, 72876)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:23:37.072876
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripad.r.ratnaparkhi@hp.com', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 34, 8, 530782)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:34:08.530782
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 34, 8, 530782)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:34:08.530782
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 34, 8, 530782)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:34:08.530782
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 34, 8, 530782)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:34:08.530782
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 34, 8, 530782)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:34:08.530782
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 34, 8, 530782)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:34:08.530782
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripad.r.ratnaparkhi@hp.com', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 48, 4, 972066)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:48:04.972066
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 48, 4, 972066)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:48:04.972066
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 48, 4, 972066)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:48:04.972066
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripad.r.ratnaparkhi@hp.com', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 53, 22, 903128)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:53:22.903128
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 53, 22, 903128)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:53:22.903128
+timestamp has not expired yet ... 
+User List : {u'shripad.r.ratnaparkhi@hp.com': [datetime.datetime(2016, 10, 4, 9, 53, 22, 903128)]}
+starting time evaluation..
+Checking user: shripad.r.ratnaparkhi@hp.com 
+2016-10-04 09:53:22.903128
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripad.r.ratnaparkhi@hp.com', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 9, 58, 20, 94452)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 09:58:20.094452
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 9, 58, 20, 94452)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 09:58:20.094452
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 9, 58, 20, 94452)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 09:58:20.094452
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripadr', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 6, 34, 883747)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:06:34.883747
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 6, 34, 883747)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:06:34.883747
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 6, 34, 883747)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:06:34.883747
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripadr', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 24, 54, 813471)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:24:54.813471
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 24, 54, 813471)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:24:54.813471
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 24, 54, 813471)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:24:54.813471
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripadr', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 10, 53, 13, 676183)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 10:53:13.676183
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripadr', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+timestamp has not expired yet ... 
+User List : {u'shripadr': [datetime.datetime(2016, 10, 4, 11, 6, 57, 191367)]}
+starting time evaluation..
+Checking user: shripadr 
+2016-10-04 11:06:57.191367
+found an user with expired timestamp
+remove key from auth_keys
+[(u'shripadr', u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEjWkw7Z11Ma/eSY1dS87FNBdws15tZgzszeDTYbuMU846qZ+fltb/ZllNKES8TPad8vnUhLRSff/raxz76dT5Ja5Iteki7GBdwZPyeoSFSevLW+VFLISmmtnGQOeohGGY8cjCOdeb7pYXZynOySSs+Yqw5DixY2KWN5h8kAxRdS7mry8fmHDYWl1iphrUHrghuOcoNUTLoY7rwVzvOdoY7Q1Jr6XesJoZJgj8olZo6ZH0pdQxYWRd/bt96sTO0xrjVjU/o9eQTItrTxtXq2V7yXMQQT/i2uAT3Dwx3Ge9wgKh5hzsmSKY1ylgyBAH35DgZRUWeJjVoqsUwgNnntdpv2aCi7X4m0Gyrg/3zSGVrZiWIpCHe9VHzwOjc/0P6K06QWDm4BgBkrpzX2rilXjA2v+MyWwHd9u2XASTxUIRHROiOXM7YwapCigXpVdEqUEpkFh1LOPDKyZjRxTpsapsAL0OurAQRTGli4Z+3PTWxkz4Cxt0hagb9y29PLQ2IM6g4WeDUi1zIRG5Zi34Ar8Y0hxtIr9lNyqVpWIrYSi0VKWMVORoA1qs9uSgPvqGbi5vCaEgLH3uJlgTZTW3tTHzEwsTuNdvgMYrajnxAxB3Bpu38DqE1ZBfPCQlCGRq3N2G6+EpYSJbs0p2g3rD6UyFjgxHIZrORdFx5DntGce5TQ== shripad.r.ratnaparkhi@hp.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 18, 23, 853849)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:18:23.853849
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 18, 23, 853849)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:18:23.853849
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 18, 23, 853849)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:18:23.853849
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 18, 23, 853849)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:18:23.853849
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 18, 23, 853849)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:18:23.853849
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 18, 23, 853849)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:18:23.853849
+found an user with expired timestamp
+remove key from auth_keys
+[(u'user3', u'ssh-rsa AAAB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322+Au/9yy9oaABBRCrHN/yo88BC0AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322klCi0/aEBBc02N+JJP john@example.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 26, 45, 497613)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:26:45.497613
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 26, 45, 497613)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:26:45.497613
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 26, 45, 497613)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:26:45.497613
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 26, 45, 497613)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:26:45.497613
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 26, 45, 497613)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:26:45.497613
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 26, 45, 497613)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:26:45.497613
+found an user with expired timestamp
+remove key from auth_keys
+[(u'user3', u'ssh-rsa AAAB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322+Au/9yy9oaABBRCrHN/yo88BC0AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322klCi0/aEBBc02N+JJP john@example.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 35, 1, 2809)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:35:01.002809
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 35, 1, 2809)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:35:01.002809
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 35, 1, 2809)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:35:01.002809
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 35, 1, 2809)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:35:01.002809
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 35, 1, 2809)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:35:01.002809
+timestamp has not expired yet ... 
+User List : {u'user3': [datetime.datetime(2016, 10, 4, 16, 35, 1, 2809)]}
+starting time evaluation..
+Checking user: user3 
+2016-10-04 16:35:01.002809
+found an user with expired timestamp
+remove key from auth_keys
+[(u'user3', u'ssh-rsa AAAB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322+Au/9yy9oaABBRCrHN/yo88BC0AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322klCi0/aEBBc02N+JJP user3@example.com')]
+user deleted from authfile
+mark the user as active
+remove/update entries from access_status and user_details
+commit db changes..starting..
+committed changes ...........
+update local users file
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
+no active entries in db
