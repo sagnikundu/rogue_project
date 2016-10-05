@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
+    <!DOCTYPE html>
     <form action="{{ url_for('add_entry') }}" method="post" class="add-entry">
       <dl>
         <dt>EMAIL_ID:
-        <dd><input type="text" size="30" name="username" placeholder="user@hp.com" required>
+        <dd><input type="text" size="50" name="username" placeholder="user@hp.com" required style="font-size:18pt;height:30px;">
         <br><br>
         <dt>SSH_PUB_KEY:
-        <dd><textarea  name="pub_key" rows=10 cols=70 placeholder="PLEASE ENTER VALID KEYS ONLY " required></textarea>
+        <dd><textarea  name="pub_key" rows=10 cols=90 placeholder="PLEASE ENTER VALID KEYS ONLY " required></textarea>
         <br><br>
         <dt>CATEGORY:
         <select name="category">
@@ -17,18 +18,37 @@
           required
         </select>
         <br><br>
-        <dd><input type="submit" value="Submit">
+        <dd><input type="submit" value="Submit" style=" width: 20em;  height: 4em;">
       </dl>
     </form>
-{#
-  <ul class="entries">
-  {% for entry in entries %}
-      <li><h2>{{ entry.user_name }}</h2>{{ entry.ssh_pub_key|safe }}</li>
-  {% else %}
-    <li><em>Unbelievable.  No entries here so far</em></li>
-  {% endfor %}
-  </ul>
-#}
-<a href="{{ url_for('request_entry') }}">Access to environments</a><br><br><a href="{{ url_for('show_entries') }}">HOME</a>
+<body>
+ <style>
+        ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #377BA8;
+        }
+        li {
+                float: right;
+        }
 
+        li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+        }
+
+        li a:hover {
+                background-color: #111111;
+        }
+   </style>
+<ul>
+<li><a href="{{ url_for('request_entry') }}">Access to environments</a></li>
+<li><a href="{{ url_for('show_entries') }}">HOME</a></li>
+</ul>
+</body>
 {% endblock %}

@@ -27,19 +27,21 @@ else:
 
     print "Checking user: %s "  % item
     print users[item][0]
-#    print type(users[item][0])  
+    #alert_time = users[item][0] - timedelta(minutes=2)
+    #if ((users[item][0] - datetime.now()).total_seconds() - (alert_time).total_seconds())
 
     if((users[item][0] - datetime.now()).total_seconds() <= 0):
       print "found an user with expired timestamp"
       db = get_con()
+  
+      env = db.execute("select env from access_status where user_name=? ", (item,)).fetchall()
 
       print "remove key from auth_keys"
       try:
-        auth_check(item)
+        auth_check(item, env[0][0])
       except:
         err4 = "Error4 !!  %s" % sys.exc_info()[0]
         print err4
-
 
       try:
         print "mark the user as active"
@@ -47,14 +49,6 @@ else:
       except:
         err = "Error1 !!  %s" % sys.exc_info()[0]
         print err
-
-
-      try:
-        print "remove/update entries from access_status and user_details"
-        db.execute("update user_details set ssh_pub_key='dummy_key', fingerprint='dummy_fp' where user_name=? ", (item,))
-      except:
-        err2a = "Error2.a !!  %s" % sys.exc_info()[0]
-        print err2a
 
 
       try:
@@ -67,14 +61,17 @@ else:
       db.commit()
       print "committed changes ..........."
 
-
-
       print "update local users file"
       try:
-        create_userfile()
+        #rem_users = db.execute("select user_name from access_status ").fetchall()
+        print "ENV: %s " % env[0][0]
+
+        create_userfile(env[0][0])
       except:
         err3 = "Error3 !!  %s" % sys.exc_info()[0]
         print err3
+
+
 
     else:
       print "timestamp has not expired yet ... "

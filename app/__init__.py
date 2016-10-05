@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from db_setup import get_db
 from create_user_file import create_userfile
 from pushkey import update_local_auth_file
+from request_for_env import req_env
 
 app = Flask(__name__)
 #from app import app
@@ -31,9 +32,41 @@ def request_access():
 @app.route('/request', methods=['GET', 'POST'])
 def request_entry():
     name = str(request.form['username'])
-    env = str(request.form['env'])
+    env = str(request.form['env']).lower()
 
-    flash("User :"+name+" is seeking access for env: "+env)
+    flash("User : "+name+" is seeking access for env: "+env)
+    # request_for_env.py
+    result = find_user(name)
+    
+    if(result != []):
+        flash('Username found in trusted list.. checking user status.')
+        user_status = result[0][1]
+
+        print "User-status: %s" % user_status
+
+        if(user_status == 'active'):
+            flash('User is active.. adding '+name+' to env: '+env)
+            completed, db = req_env(name, env)
+            key = db.execute("select ssh_pub_key from user_details where user_name=? ", (name,)).fetchall()
+            key = str(key[0][0])
+
+            print "key : %s" % key
+
+            if completed :
+                db.commit()
+                flash("User added to: "+env)
+
+                print  "creating %s user file..." % name
+                create_userfile(env)
+                print "updating %s auth file..." % env
+                update_local_auth_file(key, env)
+            else:
+                flash("User couldnot be added to :"+env)
+        else:
+            flash('User is currently inactive.. wait for the lockdown period to expire ')
+    else:
+        flash('User is not present in the trusted list, PLEASE send an email to Touchpoint.TigerOps <Touchpoint.TigerOps@hp.com> , to add yourself to the trusted list first !! ')    
+    
 
     return redirect(url_for('request_access'))
 
@@ -61,15 +94,6 @@ def add_entry():
             if completed :
                 db.commit()
                 flash('New entry was successfully posted')
-                
-                # creating a local copy for the users present in access_status
-                print "Creating user file"
-                create_userfile()
-                print "update authfile"
-                if update_local_auth_file(key):
-                    print "auth file updated"
-                else:
-                    print "auth file could not be updated"    
                 
             else:
                 flash('New entry could not be added')
@@ -106,7 +130,7 @@ def insert_details(username, category, key):
 
         print "start of insert"
 
-        db.execute('insert into access_status (user_name, env, timestamp) values (?, ?, ?)' , (username, category, start_time))
+#        db.execute('insert into access_status (user_name, env, timestamp) values (?, ?, ?)' , (username, category, start_time))
         print "verify user" 
 
         details = verify_all(username)
@@ -127,7 +151,7 @@ def insert_details(username, category, key):
             print "First time user !! updating user details"
             db.execute('INSERT INTO user_details (user_name, ssh_pub_key, fingerprint) VALUES (?, ?, ?)' , (username, key, user_fp))
 
-        db.execute("update users set status='inactive', start_timestamp=? where user_name=? ", (start_time, username))
+#        db.execute("update users set status='inactive', start_timestamp=? where user_name=? ", (start_time, username))
 
 
     except sqlite3.IntegrityError as e:

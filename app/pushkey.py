@@ -14,19 +14,20 @@ def user_get(username):
     return False
 
 
-def update_local_auth_file(key):
+def update_local_auth_file(key, env):
+  auth = '/root/workspace/rogue/project/app/%s.auth_file' % env
   update = False
   #create a authorized_keys file
-  with open(auth_file, 'a+') as f:
+  with open(auth, 'a+') as f:
     f.write(key)
     f.write("\n")
     update = True
     
     return update
 
-def delete_from_authfile(user):
-  
-  cmd = "sed -i '/ %s/d' %s " % (user, auth_file)
+def delete_from_authfile(user, env):
+  auth = '/root/workspace/rogue/project/app/%s.auth_file' % env
+  cmd = "sed -i '/ %s/d' %s " % (user, auth)
   p = subprocess.Popen([cmd], stdout=subprocess.PIPE, shell=True)
   (output, err) = p.communicate()
   p_status = p.wait()

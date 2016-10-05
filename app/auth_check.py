@@ -1,7 +1,7 @@
 from pushkey import delete_from_authfile
 from db_to_ldap import  get_con
 
-def auth_check(username):
+def auth_check(username, env):
   db = get_con()
   result = db.execute('select user_name , ssh_pub_key from user_details where user_name=?' ,(username,)).fetchall()
 
@@ -17,9 +17,10 @@ def auth_check(username):
 
   for item in user:
     uniq_id = user[item].split()[2]
-
+    item = item.strip()
+    
     #call the delete func and pass this uniq_id 
-    out = delete_from_authfile(uniq_id)
+    out = delete_from_authfile(uniq_id, env)
     if out:
       print "user deleted from authfile"
     else:

@@ -18,15 +18,33 @@
         <dd><input type="submit" value="Submit">
       </dl>
     </form>
-{#
-  <ul class="entries">
-  {% for entry in entries %}
-      <li><h2>{{ entry.user_name }}</h2>{{ entry.ssh_pub_key|safe }}</li>
-  {% else %}
-    <li><em>Unbelievable.  No entries here so far</em></li>
-  {% endfor %}
-  </ul>
-#}
-<a href="{{ url_for('show_entries') }}">HOME</a>
+<body>
+   <style>
+        ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #377BA8;
+        }
+        li {
+                float: right;
+        }
 
+        li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+        }
+
+        li a:hover {
+                background-color: #111111;
+        }
+   </style>
+<ul>
+<li><a href="{{ url_for('show_entries') }}">HOME</a></li>
+</ul>
+</body>
 {% endblock %}
