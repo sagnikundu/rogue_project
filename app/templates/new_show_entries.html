@@ -2,40 +2,26 @@
 {% block body %}
 
 <html>
-  <head>
-   <h2> INTRO PAGE </h2>
-   <style>
-	ul {
-    		list-style-type: none;
-    		margin: 0;
-    		padding: 0;
-    		overflow: hidden;
-    		background-color: #377BA8;
-	}
-	li {
-    		float: right;
-	}
+  <head>	
+<style>
+.nav ul         { list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #377BA8;}
+.nav li         { float: right; color: white;}
+.nav li a       { display: block; color: white; text-align: center; padding: 16px; text-decoration: none;}
+.nav li a.hover { background-color: #111111;}
 
-	li a {
-    		display: block;
-    		color: white;
-    		text-align: center;
-    		padding: 16px;
-    		text-decoration: none;
-	}
+</style>
+	<div class="nav">
+        	<ul>
+        		<li><a href="{{ url_for('request_entry') }}">Access to environments</a></li>
+        		<li><a href="{{ url_for('add_entry') }}">Sign-up</a></li>
+        	</ul>
+	</div>
 
-	li a:hover {
-    		background-color: #111111;
-	}
-   </style>
+	{% include 'panel.html' %}
   </head>
   <body>
 	
-        <h3> !!!  Enter the Project Documentations !!!!</h3>
-	<ul>
-        <li><a href="{{ url_for('request_entry') }}">Access to environments</a></li>
-        <li><a href="{{ url_for('add_entry') }}">Sign-up</a></li>
-	</ul>
+	 {% include 'doc.html' %}
   </body>
 </html>
 
