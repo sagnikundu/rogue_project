@@ -18,6 +18,8 @@ def req_env(username, env):
   db = get_db()
   completed = False
   start_time = datetime.now()
+  end_ts = start_time + timedelta(hours=2)
+  blackout_ts = end_ts + timedelta(hours=1)
   try:
     db.execute('insert into access_status (user_name, env, timestamp) values (?, ?, ?)' , (username, env, start_time))
 
@@ -28,7 +30,7 @@ def req_env(username, env):
     flash(err)
 
   status = verify_all(username)
-  return (status, db)
+  return (status, db, end_ts, blackout_ts)
 
 
 

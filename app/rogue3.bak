@@ -1,0 +1,23 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE users (
+user_name text NOT NULL PRIMARY KEY ,
+status text NOT NULL,
+start_timestamp text,
+category text NOT NULL );
+INSERT INTO "users" VALUES('user3','active','None','qa');
+INSERT INTO "users" VALUES('shripadr','active','None','DevOps');
+INSERT INTO "users" VALUES('sagnik.kundu@hp.com','active','None','devops');
+CREATE TABLE user_details (
+user_name text NOT NULL PRIMARY KEY ,
+ssh_pub_key text NOT NULL,
+fingerprint text NOT NULL,
+FOREIGN KEY(user_name) REFERENCES users(user_name) );
+INSERT INTO "user_details" VALUES('user3','ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoptXSzcflAlHJg8sBKnGXaKlBGA8+YuKBo63KrRCX3RFtC4+rNnOtkKhD9eT10GN3hXUvUsrN5ZAnP8I/YoO1SMbH2tKPT3MqOcdJHNnNaNS3Z3UacbwE19e5pEkdJ4JAbR401Q05pJB9sRofmqwXVi9QOBLVUGQgSklaeiBFuXrtHgEpdEpi3R2MvDnjX0n2RrHwpJSn9gb1OLsIxroUm28GV+ZYj8hLqxZY/qcQgsOsM4ipZP8EoPUecLea3LcOl/ht5ueb/F86P+Gy3IFX11yHPS5kwyWhV0Vzh8y1h30SeJCGdginZpZe/j1Y/O/h0uNl+wbs1s6VX87blKYb sagniiik@bridge','MD5:cc:10:3e:d4:bc:8d:96:86:39:98:86:f2:4b:f1:27:3e');
+INSERT INTO "user_details" VALUES('sagnik','ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoptXSzcflAlHJg8sBKnGXaKlBGA8+YuKBo63KrRCX3RFtC4+rNnOtkKhD9eT10GN3hXUvUsrN5ZAnP8I/YoO1SMbH2tKPT3MqOcdJHNnNaNS3Z3UacbwE19e5pEkdJ4JAbR401Q05pJB9sRofmqwXVi9QOBLVUGQgSklaeiBFuXrtHgEpdEpi3R2MvDnjX0n2RrHwpJSn9gb1OLsIxroUm28GV+ZYj8hLqxZY/qcQgsOsM4ipZP8EoPUecLea3LcOl/ht5ueb/F86P+Gy3IFX11yHPS5kwyWhV0Vzh8y1h30SeJCGdginZpZe/j1Y/O/h0uNl+wbs1s6VX87blKYb sagnik@bridge','MD5:cc:10:3e:d4:bc:8d:96:86:39:98:86:f2:4b:f1:27:3e');
+INSERT INTO "user_details" VALUES('sagnik.kundu@hp.com','ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoptXSzcflAlHJg8sBKnGXaKlBGA8+YuKBo63KrRCX3RFtC4+rNnOtkKhD9eT10GN3hXUvUsrN5ZAnP8I/YoO1SMbH2tKPT3MqOcdJHNnNaNS3Z3UacbwE19e5pEkdJ4JAbR401Q05pJB9sRofmqwXVi9QOBLVUGQgSklaeiBFuXrtHgEpdEpi3R2MvDnjX0n2RrHwpJSn9gb1OLsIxroUm28GV+ZYj8hLqxZY/qcQgsOsM4ipZP8EoPUecLea3LcOl/ht5ueb/F86P+Gy3IFX11yHPS5kwyWhV0Vzh8y1h30SeJCGdginZpZe/j1Y/O/h0uNl+wbs1s6VX87blKYb sagnik@bridge','MD5:cc:10:3e:d4:bc:8d:96:86:39:98:86:f2:4b:f1:27:3e');
+CREATE TABLE access_status (
+user_name text NOT NULL PRIMARY KEY,
+env text NOT NULL,
+timestamp text NOT NULL );
+COMMIT;

@@ -8,6 +8,7 @@ from db_setup import get_db
 from create_user_file import create_userfile
 from pushkey import update_local_auth_file
 from request_for_env import req_env
+from greet_mail import greet_mail
 
 app = Flask(__name__)
 #from app import app
@@ -46,11 +47,14 @@ def request_entry():
 
         if(user_status == 'active'):
             flash('User is active.. adding '+name+' to env: '+env)
-            completed, db = req_env(name, env)
+            completed, db, end_ts, blackout_ts = req_env(name, env)
             key = db.execute("select ssh_pub_key from user_details where user_name=? ", (name,)).fetchall()
             key = str(key[0][0])
 
             print "key : %s" % key
+
+            print "Sending greeting mail to : %s" % name
+            greet_mail(name, env, end_ts, blackout_ts)
 
             if completed :
                 db.commit()
@@ -59,7 +63,7 @@ def request_entry():
                 print  "creating %s user file..." % name
                 create_userfile(env)
                 print "updating %s auth file..." % env
-                update_local_auth_file(key, env)
+                update_local_auth_file(key, env, name)
             else:
                 flash("User couldnot be added to :"+env)
         else:
@@ -107,15 +111,16 @@ def add_entry():
 
 # users table is the ref table now. Entries to be updated manually here.
 
-def find_user(username):
+def find_user(username):    
     con = get_db()
     try:
         result = con.execute("select * from users where user_name=? ", (username,))
-        
+
     except sqlite3.IntegrityError as e:
         flash( e.__doc__)
     except:
-        flash('Error !!')
+        err = "Error !!  %s" % sys.exc_info()[0]
+        flash(err)
 
     return result.fetchall()
 
@@ -130,7 +135,6 @@ def insert_details(username, category, key):
 
         print "start of insert"
 
-#        db.execute('insert into access_status (user_name, env, timestamp) values (?, ?, ?)' , (username, category, start_time))
         print "verify user" 
 
         details = verify_all(username)
@@ -151,7 +155,6 @@ def insert_details(username, category, key):
             print "First time user !! updating user details"
             db.execute('INSERT INTO user_details (user_name, ssh_pub_key, fingerprint) VALUES (?, ?, ?)' , (username, key, user_fp))
 
-#        db.execute("update users set status='inactive', start_timestamp=? where user_name=? ", (start_time, username))
 
 
     except sqlite3.IntegrityError as e:

@@ -14,9 +14,10 @@ def user_get(username):
     return False
 
 
-def update_local_auth_file(key, env):
+def update_local_auth_file(key, env, name):
   auth = '/root/workspace/rogue/project/app/%s.auth_file' % env
   update = False
+  key=key+"_"+name
   #create a authorized_keys file
   with open(auth, 'a+') as f:
     f.write(key)

@@ -5,7 +5,7 @@ user_name text NOT NULL PRIMARY KEY ,
 status text NOT NULL,
 start_timestamp text,
 category text NOT NULL );
-INSERT INTO "users" VALUES('user1','inactive','2016-09-28 20:57:18.080140','devops');
+INSERT INTO "users" VALUES('user1','active','None','devops');
 CREATE TABLE user_details (
 user_name text NOT NULL PRIMARY KEY ,
 ssh_pub_key text NOT NULL,
@@ -16,5 +16,4 @@ CREATE TABLE access_status (
 user_name text NOT NULL PRIMARY KEY,
 env text NOT NULL,
 timestamp text NOT NULL );
-INSERT INTO "access_status" VALUES('user1','DEVOPS','2016-09-28 20:57:18.080140');
 COMMIT;

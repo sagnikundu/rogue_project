@@ -6,10 +6,9 @@ import os
 app = Flask(__name__)
 
 BASE_DIR = os.path.abspath(os.path.dirname('app'))
-DB = BASE_DIR + '/app/rogue3.db'
-
+DB = BASE_DIR+'/app/rogue3.db'
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
-
+#print DB
 
 
 def connect_db():
