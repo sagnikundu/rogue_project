@@ -1,10 +1,11 @@
 import sqlite3
+import os
 import sys
 from datetime import datetime, timedelta
 from db_to_ldap import execute_query, get_con
 from auth_check import auth_check
 from create_user_file import create_userfile
-#from greet_mail import warn_mail
+from alert_mail import alert_mail
 
 query = 'select user_name, timestamp from access_status'
 data = execute_query(query)
@@ -16,7 +17,7 @@ else:
 
   for item in data:
     start_time = datetime.strptime(item[1], "%Y-%m-%d %H:%M:%S.%f")      # unicode to datetime object
-    end_time = start_time + timedelta(minutes=10)
+    end_time = start_time + timedelta(minutes=5)
     users[item[0]] = [end_time]
 
   print "User List : %s" % users
@@ -30,14 +31,29 @@ else:
     print users[item][0]
 
     alert_time = users[item][0] - timedelta(minutes=2)
-    email_time = users[item][0] - timedelta(minutes=4)
+    email_time = users[item][0] - timedelta(minutes=3)
     end = users[item][0]    
 
 
-    if((email_time - datetime.now()).total_seconds() >=-20 ):
-      print "Warning mail sent to user.....>"
-      #warn_mail(item, end, alert_time)    
+    if((email_time - datetime.now()).total_seconds() <= 0 ):
 
+
+      #check to see if user file is present.
+      user = item.strip()
+      print user
+      u_file = '/root/workspace/rogue/project/app/mail/%s.alert_mail.html' % user
+      print u_file
+
+      if os.path.isfile(u_file):
+        print " alert email already sent ... skipping ..."
+      else:
+        print " mail not yet sent ... sending mail ..."
+        #cmd = 'echo "hello" >  %s' % u_file
+        #print cmd
+        #os.system(cmd)
+        alert_mail(user, end, alert_time, u_file)
+        
+        print "Warning mail sent to user.....>"
   
     if ((alert_time - datetime.now()).total_seconds() <= 0):
 

@@ -1,4 +1,5 @@
 import sqlite3
+import os
 import sys
 from datetime import datetime, timedelta
 from db_to_ldap import execute_query, get_con
@@ -38,4 +39,8 @@ else:
       print "commit db changes..starting.."
       db.commit()
       print "committed changes ..........."
-      
+      print "deleting the warning mail file for the user"
+      user = item.strip()
+      u_file = '/root/workspace/rogue/project/app/mail/%s.alert_mail.html' % user
+      os.remove(u_file)
+      print "mail file deleted ..."
