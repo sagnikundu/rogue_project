@@ -22,11 +22,12 @@ def greet_mail(user, env, end_ts, blackout_ts):
   b_sec = str(blackout_time.second)
   b_ts = b_hr+":"+b_min+":"+b_sec+" "+b_date
 
-  with open('greeting_mail.html', 'w+') as f:
+  u_file = "/root/workspace/rogue/project/app/greeting_mail.html"
+  with open(u_file, 'w+') as f:
     f.write(render_template("greeting_msg.html",user=user,env=env,e_ts=e_ts,b_ts=b_ts))
 
 
-  if os.path.exists('greeting_mail.html'):
+  if os.path.exists(u_file):
     path = 'greeting_mail.html'
     send_mail = "~/sendthemail.sh %s %s" % (user,path)
     os.system(send_mail)
