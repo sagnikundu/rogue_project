@@ -25,34 +25,34 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       <h1 style="color:teal;">Overview :</h1>
 	<p>The Lobby project is created to restrict access to users trying to ssh into any private instance in a VPC. Through the implementation of this project any user requesting access to private instances would have to follow a certain protocol. The users would have to first ssh to the jumphost in the required VPC the user wants access to. From that jumphost the user would be able ssh into private instances.</p>
 	<br>
-	<p>Project Rogue application is written with <span><strong>Flask</strong> and <strong>SQlite3</strong></span> as backend database. The app can be found here : <span><a href="http://lobby.lightaria.com">lobby.lightaria.com</a></span></p>
+	<p>Project Rogue application is written with <span><strong>Flask</strong> and <strong>SQlite3</strong></span> as backend database. To make the app more robust ,  I have set up an <span><strong> uWSGI </strong></span>application server to launch our Lobby application and <span><strong>Nginx</strong></span> to act as a front end reverse proxy. The app can be found here : <span><a href="http://lobby.lightaria.com">lobby.lightaria.com</a></span></p>
 
       <h1 style="color:teal;">Workflow:</h1>
 	<ol type="1">
-  		<li>The user on first loading the app , would be greeted with the application documentation page</li>
-  		<li>There is a navbar on top. Towards the end of the navbar, we have links to Sign-up and Access to environments</li>
+  		<li>Users logging in for the first time would be greeted with the application documentation page</li><br>
+  		<li>There is a navbar on top. Towards the end of the navbar, we have links to <span><strong>Sign-up</strong></span> and <span><strong>Access to environments</strong></span></li><br>
   		<ol type="a">
-  			<li>The Sign-up link would be used by users trying to access the app for their first time.</li>
+  			<li>The Sign-up link would be used by users trying to access the app for their first time.</li><br>
   			<ol type="i">
-  				<li>First time users are requested to send an email to Touchpoint.TigerOps@hp.com. The project devs would be adding the user to the database. The idea behind this is to maintain a list with trusted users. This prevents any anonymous accesses.</li>
-  				<li>User enters the username with which he wishes to access the jumphost.</li>
-  				<li>The user generates an ssh key pair, and uploads the public key to the app.</li>
-  				<li>Updates the UI with the details, selects a category (DEV/QA/DEVOPS) from the dropdown.</li>
-  				<li>Submits the details. The app validates the input and updates the sqlite3 db.</li>
-  				<li>Once the user is added. The ssh public key would be preserved for future access requests to different VPC's.</li>
-  				<li>If in future the user has to update the ssh keys. The sign-in process can be followed all over again.</li>
+  				<li>First time users are requested to send an email to Touchpoint.TigerOps@hp.com. The project devs would be adding the user to the database. The idea behind this is to maintain a list with trusted users. This prevents any anonymous accesses.</li><br>
+  				<li>User enters the username with which he wishes to access the jumphost.</li><br>
+  				<li>The user generates an ssh key pair, and uploads the public key to the app.</li><br>
+  				<li>Updates the UI with the details, selects a category (DEV/QA/DEVOPS) from the dropdown.</li><br>
+  				<li>Submits the details. The app validates the input and updates the sqlite3 db.</li><br>
+  				<li>Once the user is added. The ssh public key would be preserved for future access requests to different VPC's.</li><br>
+  				<li>If in future the user has to update the ssh keys. The sign-in process can be followed all over again.</li><br>
   			</ol>
-  			<li>Next we have the Access to environments page. (prereq : Sign-in process for that user must be completed)</li>
+  			<li>Next we have the Access to environments page. (prereq : Sign-in process for that user must be completed)</li><br>
   			<ol type="i">
-  				<li>Through this page the user would be able to request for access to one vpc at a time , eg Stable, Latest, Infogain ... etc</li>
-  				<li>The username entered during sign-in process should be used along with the VPC env selected from the dropdown.</li>
-  				<li>Once the user submits the request. The app would again validate all the prereqs, and pushes the user/key to the jumphost.</li>
+  				<li>Through this page the user would be able to request for access to one vpc at a time , eg Stable, Latest, Infogain ... etc</li><br>
+  				<li>The username entered during sign-in process should be used along with the VPC env selected from the dropdown.</li><br>
+  				<li>Once the user submits the request. The app would again validate all the prereqs, and pushes the user/key to the jumphost.</li><br>
   			</ol>
 		</ol>
-  		<li>The user/key would take a few minutes (~ 5 -10 mins) to propagate to the target jumphost (lobby instance) and the private instance for the requested VPC.</li>
-  		<li>Once propagated the user would be able to ssh into the lobby instance, and to other private instances through it.</li>
-  		<li>Once granted access, the user can continue to access the particular vpc for 3 hrs (configurable). At the end of which the user/keys are revoked from the instances/jumphost.</li>
- 	 	<li>The user will not be granted access to multiple vpcs at the same time.</li>
+  		<li>The user/key would take a few minutes (~ 5 -10 mins) to propagate to the target jumphost (lobby instance) and the private instance for the requested VPC.</li><br>
+  		<li>Once propagated the user would be able to ssh into the lobby instance, and to other private instances through it.</li><br>
+  		<li>Once granted access, the user can continue to access the particular vpc for 3 hrs (configurable). At the end of which the user/keys are revoked from the instances/jumphost.</li><br>
+ 	 	<li>The user will not be granted access to multiple vpcs at the same time.</li><br>
 </ol>
     </div>
 

@@ -3,18 +3,27 @@
 <body>
 Hi sagnik.kundu@hp.com,<br>
 
-Your access request to the latest has been received and granted.<br>
+Your access request to the<strong> latest</strong> has been received and granted.<br>
 Please ensure that your private keys are in default location : <strong>$HOME/.ssh/id_rsa.</strong><br>
 Use this command to log in to the environment :<br><br>
 
-<strong>$ ssh -l sagnik.kundu@hp.com jumphost.lightaria.com</strong><br><br>
+<strong> ssh -A -l sagnik.kundu@hp.com lobby-latest.lightaria.com</strong><br><br>
 
-Your access would be revoked at :<strong>14:32:42 2016-10-14 UTC </strong><br>
-And , you will not be able to request access until :<strong>15:32:42 2016-10-14 UTC </strong>.<br>
+From the Jumphost, access to private instances in that VPC can be accessed using:<br><br>
+
+<strong> ssh -A -l sagnik.kundu@hp.com private_instance_name </strong><br><br>
+
+Your access would be revoked at :<strong>18:25:40 2016-11-21 UTC </strong><br>
+After which the lockdown period of 1 hour would start<br>
+And , you will not be able to request access until :<strong>19:25:40 2016-11-21 UTC </strong>.<br><br>
+
 In case you face any difficulties or need further assistance,<br>
 reach out to DevOps HipChat room or email us at <strong>touchpoint.tigerops@hp.com</strong><br><br>
 
 Thanks,<br>
-DevOps Team.
+DevOps Team.<br><br><br>
+
+
+p.s. Please verify your local timings in accordance with UTC.
 </body>
 </html>

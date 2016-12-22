@@ -3,13 +3,18 @@
 <body>
 Hi {{user}},<br>
 
-Your access would be revoked in: {{alert_ts}} UTC <br>
-And. you will not be able to request access until: {{end_ts}} UTC <br><br>
+Your access would be revoked in next <strong>15 mins</strong>. <br>
+After which you will have a lockdown period of 1 hour.<br>
+During the lockdown period, you will not be able to make any new request.<br>
+Your new requests would be accepted after <strong>{{end_ts}} UTC</strong>. <br><br>
 
 In case you face any difficulties or need further assistance,<br>
 reach out to DevOps HipChat room or email us at <strong>touchpoint.tigerops@hp.com</strong><br><br>
 
 Thanks,<br>
-DevOps Team.
+DevOps Team. <br><br><br>
+
+
+p.s. Please verify your local timings in accordance with UTC.
 </body>
 </html>

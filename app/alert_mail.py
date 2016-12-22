@@ -25,7 +25,7 @@ def alert_mail(user, end_ts, alert_ts, u_file):
   template = env.get_template('templates/warn_msg.html')
 
   #u_file = '/root/workspace/rogue/project/app/mail/%s.alert_mail.html' % user
-  output_from_parsed_template = template.render(user=user,end_ts=e_ts,alert_ts=a_ts)
+  output_from_parsed_template = template.render(user=user,end_ts=e_ts)
 
   with open(u_file, 'w+') as f:
     f.write(output_from_parsed_template)

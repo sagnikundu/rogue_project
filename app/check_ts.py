@@ -17,7 +17,7 @@ else:
 
   for item in data:
     start_time = datetime.strptime(item[1], "%Y-%m-%d %H:%M:%S.%f")      # unicode to datetime object
-    end_time = start_time + timedelta(minutes=5)
+    end_time = start_time + timedelta(hours=3)
     users[item[0]] = [end_time]
 
   print "User List : %s" % users
@@ -30,8 +30,8 @@ else:
     print "Checking user: %s "  % item
     print users[item][0]
 
-    alert_time = users[item][0] - timedelta(minutes=2)
-    email_time = users[item][0] - timedelta(minutes=3)
+    alert_time = users[item][0] - timedelta(hours=1)
+    email_time = users[item][0] - timedelta(minutes=75)
     end = users[item][0]    
 
 

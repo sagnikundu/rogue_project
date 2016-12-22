@@ -23,9 +23,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Overview :</h1>
-	<p>The Lobby project is created to restrict access to users trying to ssh into any private instance in a VPC. Through the implementation of this project any user requesting access to private instances would have to follow a certain protocol. The users would have to first ssh to the jumphost in the required VPC the user wants access to. From that jumphost the user would be able ssh into private instances.</p>
+	<p>The Lobby project is created to restrict access to users trying to ssh into any private instance in a VPC. Through the implementation of this project any user requesting access to private instances would have to follow a certain protocol. The users would have to first ssh to the jumphost in the required VPC the user wants access to. From that jumphost the user would be able ssh into private instances. After loging in, the user will only be able to run restricted set of commands as permitted by the Admin. This will ensure the integrity of the system is intact and make this whole process secure and transparent. </p>
 	<br>
-	<p>Project Rogue application is written with <span><strong>Flask</strong> and <strong>SQlite3</strong></span> as backend database. The app can be found here : <span><a href="http://lobby.lightaria.com">lobby.lightaria.com</a></span></p>
+	<p>Project Rogue application is written with <span><strong>Flask</strong> and <strong>SQlite3</strong></span> as backend database. To make the app more robust , I have set up an <span><strong>uWSGI</strong></span> application server to launch our Lobby application and <span><strong>Nginx</strong></span> to act as a front end reverse proxy. The app can be found here : <span><a href="http://lobby.lightaria.com">lobby.lightaria.com</a></span></p>
 
       <h1 style="color:teal;">Workflow:</h1>
 	<ul style="list-style-type:disc">

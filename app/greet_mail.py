@@ -29,6 +29,6 @@ def greet_mail(user, env, end_ts, blackout_ts):
 
   if os.path.exists(u_file):
     path = 'greeting_mail.html'
-    send_mail = "~/sendthemail.sh %s %s" % (user,path)
+    send_mail = "/bin/bash /root/sendthemail.sh %s %s" % (user,path)
     os.system(send_mail)
 		
